@@ -21,6 +21,7 @@ model <- lm (
   data = mpg
 )
 
+model 
 
 predict(model, mpg)
 
