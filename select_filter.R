@@ -37,3 +37,35 @@ mpg %>%
 #mod
 5 %/% 2
 
+# count group by top 5
+mpg %>%
+  count(manufacturer) %>%
+  arrange(-n) %>%
+  top_n(5)
+
+mpg %>%
+  group_by(model) %>%
+  summarise(
+    displ_medio = mean(hwy),
+    cty_medio = mean(cty)
+  )
+
+mpg %>%
+  count(manufacturer) %>%
+  spread(manufacturer, n) %>%
+  View()
+
+
+mpg %>%
+  count(year) %>%
+  spread(year, n) %>%
+  gather(
+    `1999`, `2008`,
+    key = "year",
+    value = "n"
+  ) %>%
+  View()
+
+
+
+
