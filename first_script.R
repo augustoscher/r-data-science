@@ -8,7 +8,7 @@ tabela <- tribble(
 
 meu.nome <- "Augusto Scher"
 runif(0, 5)
-read.csv("./household_power_consumption.csv")
+read.csv("git/rep/r-data-science/household_power_consumption.csv")
 
 idades <- c(27, 28, 29, 39, NA)
 mean(idades, na.rm = TRUE)
